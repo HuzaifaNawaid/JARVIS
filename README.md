@@ -1,53 +1,39 @@
-JARVIS - Your Personal Voice Assistant
+# **JARVIS - Your Personal Voice Assistant**
 
-Introduction
-
+## **Introduction**
 JARVIS is a Python-based voice assistant that can perform various tasks, such as searching Wikipedia, opening websites, sending WhatsApp messages, and controlling your PC. It uses speech recognition to take voice commands and responds using text-to-speech.
 
-Features
+## **Features**
+- Greets the user based on the time of day.
+- Searches Wikipedia and reads summaries.
+- Opens popular websites like YouTube, Stack Overflow, GitHub, Google, and ChatGPT.
+- Tells the current time.
+- Shuts down or restarts the computer on command.
+- Sends WhatsApp messages using `pywhatkit`.
+- Opens applications using `pyautogui`.
 
-Greets the user based on the time of day.
+## **Technologies Used**
+- Python
+- `pyttsx3` for text-to-speech
+- `speech_recognition` for voice input
+- `wikipedia` for searching Wikipedia
+- `webbrowser` for opening websites
+- `os` for system commands
+- `pywhatkit` for sending WhatsApp messages
+- `pyautogui` for automating keyboard actions
 
-Searches Wikipedia and reads summaries.
+## **Usage**
+1. Run the script, and JARVIS will greet you.
+2. Speak a command (e.g., "open YouTube", "tell me time", "shutdown my PC").
+3. JARVIS will process your command and execute the corresponding action.
+4. Say "exit" to close the assistant.
 
-Opens popular websites like YouTube, Stack Overflow, GitHub, Google, and ChatGPT.
+## **Future Improvements**
+- Adding more commands and functionalities.
+- Enhancing accuracy with better speech recognition techniques.
+- Integrating AI chat capabilities.
 
-Tells the current time.
-
-Shuts down or restarts the computer on command.
-
-Sends WhatsApp messages using pywhatkit.
-
-Opens applications using pyautogui.
-
-Technologies Used
-
-Python
-
-pyttsx3 for text-to-speech
-
-speech_recognition for voice input
-
-wikipedia for searching Wikipedia
-
-webbrowser for opening websites
-
-os for system commands
-
-pywhatkit for sending WhatsApp messages
-
-pyautogui for automating keyboard actions
-
-Future Improvements
-
-Adding more commands and functionalities.
-
-Enhancing accuracy with better speech recognition techniques.
-
-Integrating AI chat capabilities.
-
-Credits
-
+## **Credits**
 Developed by [HUZAIFA NAWAID].
 
 This project is open-source. Feel free to modify and enhance it!
