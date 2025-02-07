@@ -22,7 +22,7 @@ JARVIS is a Python-based voice assistant that can perform various tasks, such as
 - `os` for system commands
 - `pywhatkit` for sending WhatsApp messages
 - `pyautogui` for automating keyboard actions
--  random for game logic
+-  `random` for game logic 
 
 ## **Usage**
 1. Run the script, and JARVIS will greet you.
