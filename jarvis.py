@@ -114,6 +114,7 @@ if __name__=="__main__":
 
         elif "play rock paper scissors" in query:
             rock_paper_scissors()
+            
         elif "guess the number" in query:
             guess_the_number()
                 
