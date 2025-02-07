@@ -6,6 +6,7 @@ import webbrowser
 import os
 import pywhatkit
 import pyautogui
+import random
 
 
 engine = pyttsx3.init('sapi5')
@@ -55,6 +56,35 @@ def listen():
         print("Recognizing...")
         return recognizer.recognize_google(audio)
 
+def rock_paper_scissors():
+    speak("Choose rock, paper, or scissors.")
+    user_choice = takecommand()
+    choices = ["rock", "paper", "scissors"]
+    computer_choice = random.choice(choices)
+    speak(f"I chose {computer_choice}.")
+    if user_choice == computer_choice:
+        speak("It's a tie!")
+    elif (user_choice == "rock" and computer_choice == "scissors") or \
+         (user_choice == "scissors" and computer_choice == "paper") or \
+         (user_choice == "paper" and computer_choice == "rock"):
+        speak("You win!")
+    else:
+        speak("I win!")
+
+def guess_the_number():
+    speak("I have thought of a number between 1 and 10. Try to guess it.")
+    number = random.randint(1, 10)
+    while True:
+        guess = takecommand()
+        if guess.isdigit():
+            guess = int(guess)
+            if guess < number:
+                speak("Too low, try again.")
+            elif guess > number:
+                speak("Too high, try again.")
+            else:
+                speak("Congratulations! You guessed it right.")
+                break
 
 if __name__=="__main__":
     wishMe()
@@ -81,6 +111,11 @@ if __name__=="__main__":
             
         elif "open chatgpt" in query:
              webbrowser.open("chatgpt.com")
+
+        elif "play rock paper scissors" in query:
+            rock_paper_scissors()
+        elif "guess the number" in query:
+            guess_the_number()
                 
         elif "open google" in query:
             speak("Sir, what should i search on google")
@@ -109,7 +144,7 @@ if __name__=="__main__":
             speak(f"your message is {message}.Is this message correct, would you like me to send it")
             confirm = listen().lower()
             if "yes" in confirm:
-              pywhatkit.sendwhatmsg("+923183367360", message, datetime.datetime.now().hour, datetime.datetime.now().minute + 1)\
+              pywhatkit.sendwhatmsg("Your Number", message, datetime.datetime.now().hour, datetime.datetime.now().minute + 1)\
         
             elif "no" in confirm:
               speak("Your message has not been sent")
